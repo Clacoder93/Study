@@ -8,7 +8,9 @@ public class Hello {
 	}
 
 	public static void sayHello() {
-System.out.println("Hello to everybody");		
+System.out.println("Hello to everybody");	
+
+System.out.println("So, now I know that it's working");
 	}
 	
 
