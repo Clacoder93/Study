@@ -48,18 +48,28 @@ class Funcionario {
 class Empresa {
 	String Nome;
 	int cnpj;
-	Funcionario[] funcionarios;
+	private Funcionario[] funcionarios;
 	int livre = 0;
-	void adicionar(Funcionario f) {
-		this.funcionarios[this.livre] = f; 
+	
+	
+	public void adicionar(Funcionario f) {
+		this.getFuncionarios()[this.livre] = f; 
 		this.livre++;
 	}
 	
-	void mostraFuncionarios() {
-		for (int i = 0; i < this.funcionarios.length; i++) {
+	public void mostraFuncionarios() {
+		for (int i = 0; i < this.getFuncionarios().length; i++) {
 			System.out.println("Funcionário na posição: "+(i+1));
-			System.out.println("salário do funcionário: "+this.funcionarios[i].salario);
+			System.out.println("salário do funcionário: "+this.getFuncionarios()[i].salario);
 		}
+	}
+
+	public Funcionario[] getFuncionarios() {
+		return funcionarios;
+	}
+
+	public void setFuncionarios(Funcionario[] funcionarios) {
+		this.funcionarios = funcionarios;
 	}
 }
 
@@ -79,22 +89,6 @@ class Data {
 	}
 }
 
-class testaEmpresa{
-	public static void main(String[] args) {
-		Empresa empresa = new Empresa();
-		empresa.funcionarios = new Funcionario[10];
-		
-		for (int i = 0; i < empresa.funcionarios.length; i++) {
-	        Funcionario f = new Funcionario();
-	        f.salario = 1000 + i * 100;
-	        empresa.adicionar(f);
-		
-		
-		}
-		
-		empresa.mostraFuncionarios();
-	}
-}
 
 /*class testaFuncionario {
 
