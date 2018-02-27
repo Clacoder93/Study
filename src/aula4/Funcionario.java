@@ -1,7 +1,7 @@
 package aula4;
 
 class Funcionario {
-	double salario;
+	private double salario;
 	String nome;
 	String cpf;
 	Data dataEntrada;
@@ -19,9 +19,17 @@ class Funcionario {
 		this.salario += aumento;
 	}
 
-	double calculaGanhoAnual() {
+	public double getGanhoAnual() {
 		return this.salario * 12;
 
+	}
+	
+	public double getSalario() {
+		return this.salario;
+	}
+	
+	public void setSalario(double novoSalario) {
+		this.salario = novoSalario;
 	}
 
 	// Exercicio 3
@@ -30,17 +38,17 @@ class Funcionario {
 
 		System.out.println("O salário mensal antes do aumento é: " + this.salario);
 
-		System.out.println("O salário anual é de: " + this.calculaGanhoAnual());
+		System.out.println("O salário anual é de: " + this.getGanhoAnual());
 
 		this.recebeAumento(500.0);
 		System.out.println("após o aumento de 500,00 R$, o salário passou a ser de: " + this.salario
-				+ " e o salário anual fica em torno de: " + this.calculaGanhoAnual());
+				+ " e o salário anual fica em torno de: " + this.getGanhoAnual());
 		// System.out.println("A data de entrada na empresa é:
 		// "+this.dataEntrada.dia+"/"+this.dataEntrada.mes+"/"+this.dataEntrada.ano);
 		System.out.println("A data de entrada na empresa é: " + this.dataEntrada.getFormatada());
 	}
 
-	// ex6
+	
 
 }
 
@@ -60,7 +68,7 @@ class Empresa {
 	public void mostraFuncionarios() {
 		for (int i = 0; i < this.getFuncionarios().length; i++) {
 			System.out.println("Funcionário na posição: "+(i+1));
-			System.out.println("salário do funcionário: "+this.getFuncionarios()[i].salario);
+			System.out.println("salário do funcionário: "+this.getFuncionarios()[i].getSalario());
 		}
 	}
 

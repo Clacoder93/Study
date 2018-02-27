@@ -7,7 +7,7 @@ class TestaEmpresaAULA5{
 		
 		for (int i = 0; i < empresa.getFuncionarios().length; i++) {
 	        Funcionario f = new Funcionario();
-	        f.salario = 1000 + i * 100;
+	        f.setSalario(1000 + i * 100);
 	        empresa.adicionar(f);
 		
 		

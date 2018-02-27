@@ -6,6 +6,10 @@ class Conta {
 	private double saldo;
 	private double limite;
 
+	public Conta (int numero, double limite) {
+		
+	}
+	
 	public void saca(double qtd) {
 		if (qtd < this.saldo) {
 			this.saldo -= qtd;
