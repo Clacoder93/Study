@@ -8,35 +8,74 @@ package projetosPessoais;
 */
 class Conta {
 	private int numero;
-	private int agencia;
+	private String agencia;
 	private double saldo;
 	private double limite;
 	Pessoa titular;
 
+	/**
+	 * @return the agency
+	 */
+	public String getAgencia() {
+		return agencia;
+	}
+
+	/**
+	 * @param agencia the agency to set
+	 */
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+
+	/**
+	 * @return the saldo
+	 */
+	public double getSaldo() {
+		return saldo;
+	}
+
+	/**
+	 * @param saldo the saldo to set
+	 */
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
 	public void sacar(double valorSaque) {
-		if (this.saldo < valorSaque) {
+		if (this.getSaldo() < valorSaque) {
 			System.out.println("Saldo insuficiente");
 		} else {
-			this.saldo -= valorSaque;
+			this.setSaldo(this.getSaldo() - valorSaque);
 		}
 
 	}
 
 	public void depositar(double valorDeposito) {
-		this.saldo += valorDeposito;
+		this.setSaldo(this.getSaldo() + valorDeposito);
 	}
 
 	public void transfere(Conta destino, double valorTransfer) {
 		if (verifica(destino, valorTransfer)) {
-			destino.saldo -= valorTransfer;
+			destino.setSaldo(destino.getSaldo() - valorTransfer);
 		} else {
-			this.saldo += valorTransfer;
+			this.setSaldo(this.getSaldo() + valorTransfer);
 		}
 	}
 
 	public boolean verifica(Conta destino, double valor) {
-		if (destino.saldo <= valor) {
+		if (destino.getSaldo() <= valor) {
+			System.out.println("Saldo insuficiente");
 			return false;
+			
+			
 		} else {
 			return true;
 		}
@@ -44,8 +83,8 @@ class Conta {
 }
 
 class Pessoa {
-	private String nome;
-	private String sobrenome;
-	private String sexo;
-	private int idade;
+	 String nome;
+	 String sobrenome;
+	 String sexo;
+	 int idade;
 }
