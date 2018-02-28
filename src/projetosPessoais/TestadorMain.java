@@ -30,6 +30,9 @@ class TestadorMain {
 		c3.setNumero(954);
 		c3.setSaldo(45000);
 		c3.setAgencia("78965-1");
+
+		
+		
 		
 		
 	}

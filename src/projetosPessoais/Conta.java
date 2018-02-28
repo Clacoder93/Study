@@ -21,7 +21,8 @@ class Conta {
 	}
 
 	/**
-	 * @param agencia the agency to set
+	 * @param agencia
+	 *            the agency to set
 	 */
 	public void setAgencia(String agencia) {
 		this.agencia = agencia;
@@ -35,7 +36,8 @@ class Conta {
 	}
 
 	/**
-	 * @param saldo the saldo to set
+	 * @param saldo
+	 *            the saldo to set
 	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
@@ -74,8 +76,7 @@ class Conta {
 		if (destino.getSaldo() <= valor) {
 			System.out.println("Saldo insuficiente");
 			return false;
-			
-			
+
 		} else {
 			return true;
 		}
@@ -83,8 +84,8 @@ class Conta {
 }
 
 class Pessoa {
-	 String nome;
-	 String sobrenome;
-	 String sexo;
-	 int idade;
+	String nome;
+	String sobrenome;
+	String sexo;
+	int idade;
 }
