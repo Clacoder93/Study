@@ -1,13 +1,16 @@
 package projetosPessoais;
 
+
 class TestadorMain {
 
 	public static void main(String[] args) {
 		Conta c1 = new Conta();
+		Pessoa titular1 = new Pessoa();
 		Conta c2= new Conta();
 		Conta c3 = new Conta();
 		
 		
+		c1.setTitular(titular1);
 		c1.getTitular().setNome("Lino");
 		c1.getTitular().setIdade(24);
 		c1.getTitular().setSexo("m");

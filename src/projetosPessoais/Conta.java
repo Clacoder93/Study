@@ -100,9 +100,9 @@ class Conta {
 }
 
 class Pessoa {
-	private String nome;
-	private String sobrenome;
-	private String sexo;
+	private String nome="";
+	private String sobrenome="";
+	private String sexo="";
 	private int idade;
 	
 	
