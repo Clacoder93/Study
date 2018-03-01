@@ -6,6 +6,7 @@ class TesteModificador {
 		Conta joao = new Conta();
 
 		joao.numero = 123;
+		joao.titular.nome="Lino";
 		joao.setLimite(100);
 		
 		joao.deposita(500.0);

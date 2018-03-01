@@ -11,34 +11,46 @@ class Conta {
 	private String agencia;
 	private double saldo;
 	private double limite;
-	Pessoa titular;
+	private Pessoa titular;
 
-	/**
-	 * @return the agency
-	 */
+	
+	//Getter and setters
+
+	public Pessoa getTitular() {
+		return titular;
+	}
+
+
+	public void setTitular(Pessoa titular) {
+		this.titular = titular;
+	}
+
+
+	public double getLimite() {
+		return limite;
+	}
+
+
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+
+
 	public String getAgencia() {
 		return agencia;
 	}
 
-	/**
-	 * @param agencia
-	 *            the agency to set
-	 */
+	
 	public void setAgencia(String agencia) {
 		this.agencia = agencia;
 	}
 
-	/**
-	 * @return the saldo
-	 */
+	
 	public double getSaldo() {
 		return saldo;
 	}
 
-	/**
-	 * @param saldo
-	 *            the saldo to set
-	 */
+	
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
@@ -50,6 +62,10 @@ class Conta {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
+	
+	
+	
+	//métodos
 
 	public void sacar(double valorSaque) {
 		if (this.getSaldo() < valorSaque) {
@@ -84,8 +100,42 @@ class Conta {
 }
 
 class Pessoa {
-	String nome;
-	String sobrenome;
-	String sexo;
-	int idade;
+	private String nome;
+	private String sobrenome;
+	private String sexo;
+	private int idade;
+	
+	
+	//Getter and setters
+	public int getIdade() {
+		return idade;
+	}
+	
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+	public String getSexo() {
+		return sexo;
+	}
+	
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	
+	public String getSobrenome() {
+		return sobrenome;
+	}
+	
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String novoNome) {
+		this.nome = novoNome;
+	}
 }
