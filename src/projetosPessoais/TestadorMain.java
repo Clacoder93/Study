@@ -34,6 +34,7 @@ class TestadorMain {
 		System.out.println("o saldo do titular é: "+c1.getSaldo());
 		System.out.println("o saldo do titular é: "+c2.getSaldo());
 		
+		//teste de transferência
 		c2.transfere(c1, 1500.0);
 		
 		
