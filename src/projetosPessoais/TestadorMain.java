@@ -50,7 +50,7 @@ class TestadorMain {
 		System.out.println("o saldo do titular "+ c1.getTitular().getNome()+" é: "+c1.getSaldo());
 		System.out.println("o saldo do titular "+ c2.getTitular().getNome()+" é: "+c2.getSaldo());
 		
-		//teste de transferência
+		//teste de transferência com valor insuficiente.
 		c2.transfere(c1, 1500.0);
 		
 		System.out.println("o saldo do titular "+ c1.getTitular().getNome()+" é: "+c1.getSaldo());
