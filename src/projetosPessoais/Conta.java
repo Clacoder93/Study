@@ -81,15 +81,18 @@ class Conta {
 	}
 
 	public void transfere(Conta destino, double valorTransfer) {
-		if (verifica(destino, valorTransfer)) {
-			destino.setSaldo(destino.getSaldo() - valorTransfer);
+		if (verifica(valorTransfer)) {
+			this.setSaldo(this.getSaldo() - valorTransfer);
+			destino.setSaldo(destino.getSaldo() + valorTransfer);
+			System.out.println("Transferência realizado com sucesso");
+			
 		} else {
-			this.setSaldo(this.getSaldo() + valorTransfer);
+			System.out.println("Transferência não realizada");
 		}
 	}
 
-	public boolean verifica(Conta destino, double valor) {
-		if (destino.getSaldo() <= valor) {
+	public boolean verifica(double valor) {
+		if (this.getSaldo() <= valor) {
 			System.out.println("Saldo insuficiente");
 			return false;
 
