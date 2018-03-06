@@ -1,4 +1,4 @@
-package aula5;
+package java1aula5;
 
 class Conta {
 	int numero;
@@ -6,16 +6,23 @@ class Conta {
 	private double saldo;
 	@SuppressWarnings("unused")
 	private double limite;
+	
+	private static int numeroIncremental =1;
 
-	// Construtores
+	// Construtores Atividade aula 6
 	public Conta(int numero, double limite) {
-
+		this.numero= numero;
+		this.limite= limite;
 	}
 
 	public Conta() {
-
+		this.numero = numeroIncremental;
+		numeroIncremental++;
 	}
+	
+	
 
+	//métodos
 	public void saca(double qtd) {
 		if (qtd < this.saldo) {
 			this.saldo -= qtd;

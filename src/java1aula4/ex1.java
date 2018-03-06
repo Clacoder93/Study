@@ -1,4 +1,4 @@
-package aula4;
+package java1aula4;
 //Exercício página 50 apostila fj11 da Caelum > https://www.caelum.com.br/download/caelum-java-objetos-fj11.pdf
 
 class ex1 {

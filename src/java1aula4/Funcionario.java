@@ -1,7 +1,7 @@
-package aula3;
+package java1aula4;
 
 class Funcionario {
-	double salario;
+	private double salario;
 	String nome;
 	String cpf;
 	Data dataEntrada;
@@ -19,9 +19,17 @@ class Funcionario {
 		this.salario += aumento;
 	}
 
-	double calculaGanhoAnual() {
+	public double getGanhoAnual() {
 		return this.salario * 12;
 
+	}
+	
+	public double getSalario() {
+		return this.salario;
+	}
+	
+	public void setSalario(double novoSalario) {
+		this.salario = novoSalario;
 	}
 
 	// Exercicio 3
@@ -30,18 +38,47 @@ class Funcionario {
 
 		System.out.println("O salário mensal antes do aumento é: " + this.salario);
 
-		System.out.println("O salário anual é de: " + this.calculaGanhoAnual());
+		System.out.println("O salário anual é de: " + this.getGanhoAnual());
 
 		this.recebeAumento(500.0);
 		System.out.println("após o aumento de 500,00 R$, o salário passou a ser de: " + this.salario
-				+ " e o salário anual fica em torno de: " + this.calculaGanhoAnual());
+				+ " e o salário anual fica em torno de: " + this.getGanhoAnual());
 		// System.out.println("A data de entrada na empresa é:
 		// "+this.dataEntrada.dia+"/"+this.dataEntrada.mes+"/"+this.dataEntrada.ano);
 		System.out.println("A data de entrada na empresa é: " + this.dataEntrada.getFormatada());
 	}
 
-	// ex6
+	
 
+}
+
+// Exercício 1 da aula4
+class Empresa {
+	String Nome;
+	int cnpj;
+	private Funcionario[] funcionarios;
+	int livre = 0;
+	
+	
+	public void adicionar(Funcionario f) {
+		this.getFuncionarios()[this.livre] = f; 
+		this.livre++;
+	}
+	
+	public void mostraFuncionarios() {
+		for (int i = 0; i < this.getFuncionarios().length; i++) {
+			System.out.println("Funcionário na posição: "+(i+1));
+			System.out.println("salário do funcionário: "+this.getFuncionarios()[i].getSalario());
+		}
+	}
+
+	public Funcionario[] getFuncionarios() {
+		return funcionarios;
+	}
+
+	public void setFuncionarios(Funcionario[] funcionarios) {
+		this.funcionarios = funcionarios;
+	}
 }
 
 class Data {
@@ -60,7 +97,8 @@ class Data {
 	}
 }
 
-class testaFuncionario {
+
+/*class testaFuncionario {
 
 	public static void main(String[] args) {
 
@@ -70,8 +108,8 @@ class testaFuncionario {
 		f1.salario = 2550.50;
 		f1.dataEntrada = new Data();
 		f1.dataEntrada.preencheData(1, 6, 1993);
-		f1.mostra();
-
+		//f1.mostra();
+		
 		Funcionario f2 = new Funcionario();
 		f2.nome = "Renan Mastroto";
 		f2.salario = 2000.0;
@@ -80,4 +118,4 @@ class testaFuncionario {
 
 	}
 
-}
+}*/

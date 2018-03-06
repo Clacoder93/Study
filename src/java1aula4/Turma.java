@@ -1,4 +1,4 @@
-package aula4;
+package java1aula4;
 
 /**
  * @author claCoder Atividades desenvolvidas durante a aula 4 do curso JAVA I:
