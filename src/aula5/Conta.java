@@ -4,6 +4,7 @@ class Conta {
 	int numero;
 	Cliente titular;
 	private double saldo;
+	@SuppressWarnings("unused")
 	private double limite;
 
 	// Construtores
