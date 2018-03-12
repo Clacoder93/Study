@@ -29,7 +29,7 @@ class Funcionario {
 class testaFuncionario {
 	public static void main(String[] args) {
 		Funcionario lino = new Funcionario();
-		lino.setSalario(500.0);
+		lino.setSalario(1000.0);
 		
 		System.out.println(lino.getBonus());
 	}
